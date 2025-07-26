@@ -151,11 +151,40 @@ npm run lint
 
 ## 🚀 Deployment
 
+### Local Production Build
 Build the application for production:
 ```bash
 npm run build
 npm start
 ```
+
+### Vercel Deployment
+
+This project is optimized for Vercel deployment:
+
+1. **Connect to Vercel**:
+   - Install Vercel CLI: `npm i -g vercel`
+   - Run `vercel` in the project directory
+   - Follow the prompts to connect your GitHub repository
+
+2. **Automatic Deployment**:
+   - Push to your main branch to trigger automatic deployments
+   - Vercel will automatically build and deploy your app
+
+3. **Environment Variables** (if needed):
+   - Add any environment variables in the Vercel dashboard
+   - The app automatically detects `VERCEL_URL` for production URLs
+
+4. **Custom Domain** (optional):
+   - Configure custom domains in the Vercel dashboard
+   - SSL certificates are automatically provisioned
+
+### Deployment Features
+- ✅ **Standalone Output**: Optimized for serverless deployment
+- ✅ **API Route Optimization**: Proper caching headers for trading data
+- ✅ **Environment Detection**: Automatically adapts to production URLs
+- ✅ **TypeScript Support**: Full type safety in production
+- ✅ **Performance Optimized**: Package imports and build optimizations
 
 ## 📚 Documentation
 
@@ -168,4 +197,5 @@ Interactive API documentation is available at `/documentation` when the server i
 3. Make your changes
 4. Add tests if applicable
 5. Submit a pull request
+
 
