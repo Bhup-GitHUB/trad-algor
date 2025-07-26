@@ -1,14 +1,16 @@
-export interface Balance {
+export interface Balances {
   [key: string]: number;
-}
-
-export interface Order {
-  userID: string;
-  prince: number;
-  quantity: number;
 }
 
 export interface User {
   id: string;
-  balance: Balance;
+  balances: Balances;
 }
+
+export interface Order {
+  userId: string;
+  price: number;
+  quantity: number;
+}
+
+export const TICKER = "GOOGLE";
