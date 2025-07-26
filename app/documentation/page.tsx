@@ -1,11 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 
 export default function DocumentationPage() {
-  const router = useRouter();
-
   useEffect(() => {
     // Redirect to the Swagger UI
     window.location.href = '/api/documentation';
