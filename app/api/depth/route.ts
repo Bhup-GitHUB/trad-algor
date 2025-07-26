@@ -1,6 +1,27 @@
 import { NextResponse } from "next/server";
 import { bids, asks } from "@/lib/store";
 
+/**
+ * @swagger
+ * /api/depth:
+ *   get:
+ *     summary: Get order book depth
+ *     description: Retrieve the complete order book showing all bid and ask orders grouped by price
+ *     tags: [Market Data]
+ *     responses:
+ *       200:
+ *         description: Order book depth
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Depth'
+ *       500:
+ *         description: Internal server error
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Error'
+ */
 export async function GET() {
   const depth: Record<string, { type: "bid" | "ask"; quantity: number }> = {};
 
